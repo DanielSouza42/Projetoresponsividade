@@ -1,0 +1,32 @@
+@import url(./cabecalho.css);
+@import url(./cards.css);
+@import url(./menu.css);
+@import url(./botaoflutuante.css);
+@import url(./formularios.css);
+
+:root{
+    --texto-escuro: #464646;
+    --texto-claro: #A3A3A3;
+    --branco: #fff;
+    --laranja: #FFB050;
+    --azul: #4894FF;
+    --azul-hover: #4786F0;
+    --azul-shadow: #57A4FF;
+}
+
+a:hover, button:hover, .menu__lista li, input[type="radio"] {
+    cursor: pointer;
+}
+
+body{
+    background: linear-gradient(166deg, #F8F4FF 0%, #EFF0F4 100%);
+    font-family: "Montserrat", sans-serif;
+    /* position: static; */
+}
+
+main{
+    padding: 0 1em 0 1em;
+}
+
+
+

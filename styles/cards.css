@@ -1,0 +1,212 @@
+.consultas{
+    height: calc(100vh - 190px - 58px);
+    overflow-y: scroll;
+    /* margin-bottom: 4em; */
+    
+}
+
+.data{
+    color: var(--texto-escuro);
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 160%; /* 25.6px */;
+    padding-top: 2em;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    gap: 1em;
+
+    border-radius: 8px;
+    background: var(--branco);
+    backdrop-filter: blur(11px);
+    padding: 1em;
+    margin-top: 1em;
+}
+
+
+.card__contato-remota__botao-audio:hover, .card__contato-remota__botao-video:hover{
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.card__contato-remota__botao-audio:active, .card__contato-remota__botao-video:active{
+    background: red;
+}
+
+.card__contato-local__botao-endereco:hover{
+    background: var(--laranja);
+    color: var(--texto-escuro);
+}
+
+
+.card__contato-local__botao-endereco:active{
+    background: red;
+}
+.imagem-paciente{
+    border-radius: 50%;
+    width: 15%;
+}
+
+.card__paciente{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+
+}
+
+.card__dados-consulta{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin-right: auto;
+    
+}
+
+.card__paciente-nome{
+    color: var(--texto-escuro);
+    font-size: .875em;
+    font-weight: 700;
+    line-height: 160%; /* 22.4px */
+}
+.separacao{
+    align-self: center;
+    width: calc(100% + 2em);
+    height: 1px;
+    background: var(--texto-claro);
+    border-radius: .5rem;
+}
+
+.card__paciente-texto-remota{
+    padding-left: 1.8em;
+    background: url(../assets/Camera.svg) no-repeat;
+    background-position-y: center;
+    color: var(--texto-claro);
+    font-size: .75em;
+    font-weight: 400;
+    line-height: 160%; /* 19.2px */
+    
+}
+
+.card__contato-remota{
+    display: grid;
+    grid-template: auto 1fr / 1fr 1fr;
+    align-items: center;
+    column-gap: 1.125em;
+    row-gap: .5em;
+}
+
+.card__contato-remota__botao-video{
+    grid-area: 2/1/3/2;
+    border-radius: 8px;
+    background: var(--laranja);
+    box-shadow: 0px 4px 16px 0px rgba(255, 176, 80, 0.16);
+    padding: 0.8125em 1em;
+    color: var(--branco);
+}
+
+.card__contato-remota__botao-audio{
+    grid-area: 2/2/3/3;
+    border-radius: 8px;
+    border: 1px solid #ECECEC;
+    background: #FFF;
+    padding: 0.8125em 1em;
+    color: var(--texto-escuro);
+
+}
+
+.card__contato-remota__botao-audio, .card__contato-remota__botao-video{
+text-align: center;
+font-size: .875em;
+font-weight: 500;
+line-height: 160%; /* 22.4px */
+}
+
+.card__contato-remota__texto{
+    grid-area: 1/1/2/3;
+    height: auto;
+    color: #464646;
+    font-size: .75em;
+    font-weight: 500;
+    line-height: 160%; /* 19.2px */
+}
+
+.card__contato-local{
+    display: grid;
+    grid-template: auto 1fr / 1fr 1fr;
+    align-items: center;
+    column-gap: 1.125em;
+    row-gap: .5em;
+}
+
+.card__paciente-texto-local{
+    padding-left: 1.8em;
+    background: url(../assets/pin.svg) no-repeat;
+    background-position-y: center;
+    color: var(--texto-claro);
+    font-size: .75em;
+    font-weight: 400;
+    line-height: 160%; 
+}
+
+.card__contato-local__texto{
+    grid-area: 1/1/2/3;
+    height: auto;
+    color: #464646;
+    font-size: .75em;
+    font-weight: 500;
+    line-height: 160%;
+}
+.card__contato-local__botao-endereco{
+    grid-area: 2/1/3/3;
+    border-radius: 8px;
+    background: var(--azul);
+    box-shadow: 0px 4px 16px 0px rgba(72, 148, 255, 0.16);
+    padding: 0.8125em 1em;
+    color: var(--branco);
+    text-align: center;
+    font-size: .875em;
+    font-weight: 500;
+    line-height: 160%;
+}
+
+.cards-responsivo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    /* .cards-responsivo{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 1em;
+    } */
+
+    .cards-responsivo{
+        display: grid;
+        grid-template: min-content / repeat(2, 1fr);
+        justify-items: center;
+    }
+
+}
+
+@media screen and (min-width: 1340px){
+    .consultas{
+        height: calc(100vh - 190px);
+        padding-left: 15%;
+    }
+    
+    .cards-responsivo{
+        display: grid;
+        grid-template: min-content / repeat(3, 1fr);
+        justify-items: center;
+    }
+    
+}

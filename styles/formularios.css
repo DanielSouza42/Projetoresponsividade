@@ -1,0 +1,73 @@
+.formularios{
+    padding: 2em;
+    text-align: center;
+    /* background-color: aquamarine; */
+    padding-left: 15%;
+}
+
+.formularios h2{
+    color: var(--texto-escuro);
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 160%;
+    padding: 1em 0;
+}
+.formularios div label{
+    color: var(--texto-claro);
+font-size: 1em;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+
+.formularios input[type="text"], textarea, .formularios input{
+    border-radius: 8px;
+    border: 1px solid #ECECEC;
+    background: #FFF;
+}
+
+.formularios input[type="text"]:active, textarea:active, .formularios input:active{
+border-radius: 8px;
+border: 2px solid var(--azul-shadow);
+background: var(--branco);
+}
+
+.formularios button{
+    margin: 1em;
+    border-radius: 8px;
+    background: var(--azul);
+    box-shadow: 0px 4px 16px 0px rgba(72, 148, 255, 0.16);
+    padding: 0.8125em 1em;
+    color: var(--branco);
+    text-align: center;
+    font-size: .875em;
+    font-weight: 500;
+    line-height: 160%;
+}
+
+.formularios button:hover{
+    border: 2px solid var(--azul-shadow);
+    background: var(--azul);
+    box-shadow: 0px 4px 16px 0px rgba(72, 148, 255, 0.16);
+}
+
+.formularios button:active{
+    border-radius: 8px;
+    border: 2px solid var(--azul-shadow);
+    background: var(--azul-hover);
+    box-shadow: 0px 4px 16px 0px rgba(72, 148, 255, 0.16);
+}
+.formularios div:nth-child(5){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+@media screen and (max-width: 1340px) {
+    .formularios{
+        display: none;
+    }
+}
